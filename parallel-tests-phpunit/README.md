@@ -44,7 +44,6 @@ testsuites entry is used to integrate ParaTest with PHPUnit. In this tutorial te
 ```
 <?php
 require 'vendor/autoload.php';
-
 class SeleniumTest extends PHPUnit_Framework_TestCase {
  public function testGoogle() {
   $web_driver = new RemoteWebDriver(

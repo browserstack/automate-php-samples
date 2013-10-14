@@ -10,9 +10,9 @@ class SeleniumTest extends PHPUnit_Framework_TestCase {
   $url = "http://" . self::$user_id . ":" . self::$security_key . "@hub.browserstack.com/wd/hub";
   $caps = array(
     "browser" => "IE",
-    "browser_version" => "11.0",
+    "browser_version" => "9.0",
     "os" => "Windows",
-    "os_version" => "8.1",
+    "os_version" => "7",
     "browserstack.debug" => "true"    
   );
   $web_driver = new RemoteWebDriver(
@@ -32,9 +32,9 @@ class SeleniumTest extends PHPUnit_Framework_TestCase {
   $url = "http://" . self::$user_id . ":" . self::$security_key . "@hub.browserstack.com/wd/hub";
   $caps = array(
     "browser" => "IE",
-    "browser_version" => "11.0",
+    "browser_version" => "9.0",
     "os" => "Windows",
-    "os_version" => "8",
+    "os_version" => "7",
     "browserstack.debug" => "true"    
   );
   $web_driver = new RemoteWebDriver(
@@ -49,9 +49,9 @@ class SeleniumTest extends PHPUnit_Framework_TestCase {
   $url = "http://" . self::$user_id . ":" . self::$security_key . "@hub.browserstack.com/wd/hub";
   $caps = array(
     "browser" => "IE",
-    "browser_version" => "11.0",
+    "browser_version" => "9.0",
     "os" => "Windows",
-    "os_version" => "8.1",
+    "os_version" => "7",
     "browserstack.debug" => "true"    
   );
   $web_driver = new RemoteWebDriver(
