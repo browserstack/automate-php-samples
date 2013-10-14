@@ -48,7 +48,7 @@ require 'vendor/autoload.php';
 class SeleniumTest extends PHPUnit_Framework_TestCase {
  public function testGoogle() {
   $web_driver = new RemoteWebDriver(
-    "http://akshaybhardwaj1:XQWDewaJsUzqYJRv8zhr@hub.browserstack.com/wd/hub", 
+    "http://{your-username}:{your-passkey}@hub.browserstack.com/wd/hub", 
     array("platform"=>"WINDOWS")
   );
   $web_driver->get("http://www.google.com");
@@ -62,7 +62,7 @@ class SeleniumTest extends PHPUnit_Framework_TestCase {
  }
  public function testBrowserStack() {
   $web_driver = new RemoteWebDriver(
-    "http://akshaybhardwaj1:XQWDewaJsUzqYJRv8zhr@hub.browserstack.com/wd/hub", 
+    "http://{your-username}:{your-passkey}@hub.browserstack.com/wd/hub", 
     array("platform"=>"WINDOWS")
   );
   $web_driver->get("http://www.browserstack.com");
@@ -71,7 +71,7 @@ class SeleniumTest extends PHPUnit_Framework_TestCase {
  }
  public function testFacebook() {
   $web_driver = new RemoteWebDriver(
-    "http://akshaybhardwaj1:XQWDewaJsUzqYJRv8zhr@hub.browserstack.com/wd/hub", 
+    "http://{your-username}:{your-passkey}@hub.browserstack.com/wd/hub", 
     array("platform"=>"WINDOWS")
   );
   $web_driver->get("http://www.facebook.com");
