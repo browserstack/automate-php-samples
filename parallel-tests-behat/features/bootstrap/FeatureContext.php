@@ -10,14 +10,15 @@ use Behat\Gherkin\Node\PyStringNode,
 class FeatureContext extends BehatContext {
   private $webDriver;
   private $BROWSER_NAME = 'firefox';
-  private $PLATFORM = 'ANY';
-  private $VERSION = '';
+  private $OS = 'Windows';
+  private $OS_VERSION = '7';
+  private $BROWSER_VERSION = '23.0';
   private $USERNAME = ''; // Set your username
   private $BROWSERSTACK_KEY = ''; // Set your browserstack_key
 
   /** @Given /^I am on "([^"]*)"$/ */
   public function iAmOnSite($url) {
-    $desiredCap =  array('browserName'=> $this->BROWSER_NAME, 'platform'=> $this->PLATFORM, 'version'=> $this->VERSION);
+    $desiredCap =  array('browser'=> $this->BROWSER_NAME, 'browser_version'=> $this->BROWSER_VERSION, 'os' => $this->OS, 'os_version' => $this->OS_VERSION);
     $this->webDriver = RemoteWebDriver::create("http://".$this->USERNAME.":".$this->BROWSERSTACK_KEY."@hub.browserstack.com/wd/hub", $desiredCap);
     $this->webDriver->get($url);
   }
