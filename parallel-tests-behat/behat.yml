@@ -1,0 +1,11 @@
+F1:
+    filters:
+        tags: "@one"
+F2:
+    filters:
+        tags: "@two"
+
+default:
+    extensions:
+        shvetsgroup\ParallelRunner\Extension: 
+            process_count:  2
