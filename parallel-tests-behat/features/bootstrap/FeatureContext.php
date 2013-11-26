@@ -13,12 +13,18 @@ class FeatureContext extends BehatContext {
   private $OS = 'Windows';
   private $OS_VERSION = '7';
   private $BROWSER_VERSION = '23.0';
-  private $USERNAME = ''; // Set your username
-  private $BROWSERSTACK_KEY = ''; // Set your browserstack_key
+  private $USERNAME = 'akshaybhardwaj1'; // Set your username
+  private $BROWSERSTACK_KEY = 'XQWDewaJsUzqYJRv8zhr'; // Set your browserstack_key
+  private $tunnel = 'false';
+
+  public function __construct(array $parameters){
+    $this->tunnel = $parameters['tunnel'];
+  }
 
   /** @Given /^I am on "([^"]*)"$/ */
   public function iAmOnSite($url) {
-    $desiredCap =  array('browser'=> $this->BROWSER_NAME, 'browser_version'=> $this->BROWSER_VERSION, 'os' => $this->OS, 'os_version' => $this->OS_VERSION);
+    print("HHHHHHH >" . $this->tunnel);
+    $desiredCap =  array('browser'=> $this->BROWSER_NAME, 'browser_version'=> $this->BROWSER_VERSION, 'os' => $this->OS, 'os_version' => $this->OS_VERSION, 'browserstack.tunnel' => $this->tunnel);
     $this->webDriver = RemoteWebDriver::create("http://".$this->USERNAME.":".$this->BROWSERSTACK_KEY."@hub.browserstack.com/wd/hub", $desiredCap);
     $this->webDriver->get($url);
   }

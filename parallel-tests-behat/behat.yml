@@ -3,9 +3,12 @@ F1:
         tags: "@one"
 F2:
     filters:
-        tags: "@two"
+        tags: "@two" 
 
 default:
+    context:
+        parameters:
+            tunnel: "true"
     extensions:
         shvetsgroup\ParallelRunner\Extension: 
             process_count:  2
