@@ -15,7 +15,7 @@ class SeleniumTest extends PHPUnit_Framework_TestCase {
     "os_version" => "7",
     "browserstack.debug" => "true"    
   );
-  $web_driver = new RemoteWebDriver(
+  $web_driver = RemoteWebDriver::create(
     $url,
     $caps
   );
@@ -37,7 +37,7 @@ class SeleniumTest extends PHPUnit_Framework_TestCase {
     "os_version" => "7",
     "browserstack.debug" => "true"    
   );
-  $web_driver = new RemoteWebDriver(
+  $web_driver = RemoteWebDriver::create(
     $url,
     $caps
   );
@@ -54,7 +54,7 @@ class SeleniumTest extends PHPUnit_Framework_TestCase {
     "os_version" => "7",
     "browserstack.debug" => "true"    
   );
-  $web_driver = new RemoteWebDriver(
+  $web_driver = RemoteWebDriver::create(
     $url,
     $caps
   );
