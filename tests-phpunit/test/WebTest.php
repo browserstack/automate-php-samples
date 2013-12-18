@@ -4,31 +4,31 @@ define('BROWSERSTACK_USER', '<Set BrowserStack Username>');
 define('BROWSERSTACK_KEY', '<Set BrowserStack Key>');
 class WebTest extends PHPUnit_Extensions_Selenium2TestCase
 {
-	  public static $browsers = array(
-		  array(
-				'browserName' => 'chrome',
-				'host' => 'hub.browserstack.com',
-				'port' => 80,
-				'desiredCapabilities' => array(
-				  'version' => '30',
-					'browserstack.user' => BROWSERSTACK_USER,
-				  'browserstack.key' => 'XQWDewaJsUzqYJRv8zhr',
-					'os' => 'OS X',
-          'os_version' => 'Mountain Lion'		
-				)
-			),
-      array(
-				'browserName' => 'chrome',
-				'host' => 'hub.browserstack.com',
-				'port' => 80,
-				'desiredCapabilities' => array(
-				  'version' => '30',
-					'browserstack.user' => BROWSERSTACK_USER,
-				  'browserstack.key' => BROWSERSTACK_KEY,
-					'os' => 'Windows',
-					'os_version' => '8.1'		
-				)
-      )
+	public static $browsers = array(
+		array(
+			'browserName' => 'chrome',
+			'host' => 'hub.browserstack.com',
+			'port' => 80,
+			'desiredCapabilities' => array(
+				'version' => '30',
+				'browserstack.user' => BROWSERSTACK_USER,
+				'browserstack.key' => 'XQWDewaJsUzqYJRv8zhr',
+				'os' => 'OS X',
+				'os_version' => 'Mountain Lion'		
+			)
+		),
+		array(
+			'browserName' => 'chrome',
+			'host' => 'hub.browserstack.com',
+			'port' => 80,
+			'desiredCapabilities' => array(
+				'version' => '30',
+				'browserstack.user' => BROWSERSTACK_USER,
+				'browserstack.key' => BROWSERSTACK_KEY,
+				'os' => 'Windows',
+				'os_version' => '8.1'		
+			)
+		)
     );   
     protected function setUp()
     {
