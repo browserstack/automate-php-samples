@@ -1,6 +1,0 @@
-{
-  "require": {
-      "brianium/paratest": "dev-master",
-      "facebook/webdriver": "dev-master"
-	}
-}
